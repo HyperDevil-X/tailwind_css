@@ -16,7 +16,7 @@
 <li>PHP</li>
 </ul>
 <ul>
-<h2><b>Databases</b></h2>
+<h2><b>Database</b></h2>
 <li>MySql</li>
 </ul>
 <ul>
