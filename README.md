@@ -17,7 +17,7 @@
 </ul>
 <ul>
 <h2><b>Database</b></h2>
- <li>PhpMyAdmin</li>li>
+ <li>PhpMyAdmin</li>
 <li>MySql</li>
 </ul>
 <ul>
