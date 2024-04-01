@@ -268,3 +268,54 @@
             </script> -->
 </body>
 </html>
+
+client id:700056255935-6co8r5rekug0g60ikeen9hh9e1tapen9.apps.googleusercontent.com
+client secret: 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
+
+
+
+<!-- Include Firebase SDK for Google Authentication  -->
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+
+<script>
+    // Initialize Firebase with your own config
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Google Sign-In Function
+    function signInWithGoogle() {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+            .then((result) => { 
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = result.credential; 
+                // The signed-in user info.
+                 const user = result.user; 
+                // Redirect or perform any operation after successful authentication
+                <!-- window.location.href = "redirect_to_register.php";
+            }).catch((error) => { 
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message; 
+                // The email of the user's account used.
+                 const email = error.email; 
+                // The firebase.auth.AuthCredential type that was used.
+                 const credential = error.credential; 
+                // ...
+            });
+    } 
+ </script> 
+
+
+still it is looking too poor too much poor . i am telling repeatedly that give me more attractive look for the whole page of everything . including colourful,animation,hover effect, box shadow ,text shadow please do it perfectly
+
+// echo "<button type='submit' name='update'>Update</button>";

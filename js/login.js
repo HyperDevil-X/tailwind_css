@@ -1,7 +1,7 @@
 function validation() {
     var email = document.formfill.remail.value;
-    var password = document.formfill.rpassword.value;
-    var errorDiv = document.getElementById("loginresult");
+    var password = document.formfill.lpassword.value; // Use lpassword for password field
+    var errorDiv = document.getElementById("userlogresult");
 
     // Initially hide the error message
     errorDiv.style.display = "none";
@@ -27,17 +27,19 @@ function validation() {
         return false;
     }
     
-    
-    loginpopup.classList.add("open-slide");
-    return false; 
+    return true; // Return true if validation passes
 }
 
-var loginpopup = document.getElementById('loginpopup');
-
-
-function closePopup() {
-    
-    loginpopup.classList.remove("open-slide");
-    
-    location.reload();
+function togglePasswordVisibility(inputId, iconId) {
+    var passwordInput = document.getElementById(inputId);
+    var eyeIcon = document.getElementById(iconId);
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
 }

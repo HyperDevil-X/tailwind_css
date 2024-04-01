@@ -17,7 +17,13 @@
         <body bgcolor="#FEFBF6">
       
 
-        <div class="header">         
+        <div class="header">   
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>        
             <div class="mx-7 my-1">
                 <ul class="flex space-x-7">
                     <li><i class="fa fa-phone" aria-hidden="true"></i><span class="mx-2 font-medium">+91 8918991088</span></li>

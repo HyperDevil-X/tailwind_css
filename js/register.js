@@ -49,15 +49,56 @@ function validation() {
         return false;
     }
     
-    // Data validation passed, proceed with form submission
     return true;
 }
 
-// Function to close the popup and reload the page
-function closePopup() {
-    // Remove the open-slide class to hide the popup
-    var registerpopup = document.getElementById('registerpopup');
-    registerpopup.classList.remove("open-slide");
-    // Reload the page immediately after clicking OK
-    location.reload();
+function togglePasswordVisibility(inputId, iconId) 
+{
+    var passwordInput = document.getElementById(inputId);
+    var eyeIcon = document.getElementById(iconId);
+    if (passwordInput.type === "password") 
+    {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } 
+    else 
+    {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
 }
+
+function togglePasswordVisibility(inputId, iconId) 
+{
+    var passwordInput = document.getElementById(inputId);
+    var eyeIcons = document.getElementById(iconId);
+    if (passwordInput.type === "password") 
+    {
+        passwordInput.type = "text";
+        eyeIcons.classList.remove("fa-eye");
+        eyeIcons.classList.add("fa-eye-slash");
+    } 
+    else 
+    {
+        passwordInput.type = "password";
+        eyeIcons.classList.remove("fa-eye-slash");
+        eyeIcons.classList.add("fa-eye");
+    }
+}
+
+function togglePasswordVisibility(inputId, iconId) {
+    var passwordInput = document.getElementById(inputId);
+    var eyeIcon = document.getElementById(iconId);
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+
