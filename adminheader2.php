@@ -65,9 +65,9 @@ if(!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== true
    
 
 <!-- Main Content -->
-<div class="main-content">
+<div class="main-cont">
 	<div class="admin-info">
-			<a href=""><h3>Premium Cars-Rental</h3></a>
+			Premium Cars-Rental
 	</div>
 	
 	<div class="admin-image" onclick="toggleDropdown()">
@@ -100,9 +100,9 @@ if(!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== true
 
 
 			<div class="dropdown-menu" id="dropdownMenu">
-			<a href="admin_view_profile.php" class="dropdown-item">Profile</a>
-			<a href="view_user_profile.php" class="dropdown-item">View User</a>
-			<a href="logout.php" class="dropdown-item">Logout</a>
+			<a href="admin_view_profile.php" class="dropdown-i">Profile</a>
+			<a href="view_user_profile.php" class="dropdown-i">View User</a>
+			<a href="logout.php" class="dropdown-i">Logout</a>
 
 
 			<!---------- admin image dropdown menu start --------->

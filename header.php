@@ -44,6 +44,7 @@
                     <a href="about.php"><li class=" cursor-pointer">About</li></a>
                     <a href="contact.php"><li class=" cursor-pointer">Contact</li></a>
                     <a href="service.php"><li class=" cursor-pointer">Services</li></a>
+                    <a href="ourcars.php"><li class=" cursor-pointer">Our Cars</li></a>
                    
                 <div class="dropdown">
                     <button class="user-icon" onclick="toggleDropdown()">

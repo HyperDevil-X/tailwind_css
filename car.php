@@ -319,3 +319,142 @@ client secret: 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
 still it is looking too poor too much poor . i am telling repeatedly that give me more attractive look for the whole page of everything . including colourful,animation,hover effect, box shadow ,text shadow please do it perfectly
 
 // echo "<button type='submit' name='update'>Update</button>";
+
+
+
+SET @num :=0;
+UPDATE addvehicle SET Slno = @num := (@num+1);
+ALTER TABLE addvehicle AUTO_INCREMENT =1;
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Management System</title>
+  <style>
+.bookingcontainer {
+  width: 85%;
+  margin: 0% 0% 0% 1%;
+}
+
+.bookingcontainer h1 {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.booking-table-container {
+  max-height: 300px; /* Adjust the max height as needed */
+  overflow-y: auto;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.booking-table {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.approve-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #2BD52E; /* Green */
+  color: black;
+  margin-right: 5px;
+  transition: all .5s ease;
+}
+.approve-btn:hover{
+  box-shadow: 0px 0px 10px black;
+ background-color: #3DA403;
+ color: white;
+}
+.cancel-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #F97D5C; /* Red */
+  color: black;
+  margin-right: 5px;
+  transition: all .5s ease;
+}
+.cancel-btn:hover{
+    box-shadow: 0px 0px 10px black;
+    background-color: #D55D42;
+    color: white;
+}
+
+
+  </style> 
+</head>
+<body>
+  <div class="bookingcontainer">
+    <h1>Current Booking Status</h1>
+    <div class="booking-table-container">
+      <div class="booking-table">
+        <?php include 'fetch_bookings.php'; ?>
+      </div>
+    </div>
+  </div>
+  <script src="js/fetchingbooking.js"></script>
+</body>
+</html>
+"html code"
+<?php
+include 'connection.php';
+
+// Fetch bookings from database
+$query = "SELECT * FROM booking";
+$result = mysqli_query($conn, $query);
+
+if (mysqli_num_rows($result) > 0) {
+  echo "<table>";
+  echo "<tr><th>ID</th><th>Customer Name</th><th>Customer Number</th><th>Customer Email</th><th>Journey Location</th><th>Start Date</th><th>End Date</th><th>Car Name</th><th>Body Type</th><th>Status</th><th>Action</th></tr>";
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['customername'] . "</td>";
+    echo "<td>" . $row['customernumber'] . "</td>";
+    echo "<td>" . $row['customeremail'] . "</td>";
+    echo "<td>" . $row['journeylocation'] . "</td>";
+    echo "<td>" . $row['startdate'] . "</td>";
+    echo "<td>" . $row['enddate'] . "</td>";
+    echo "<td>" . $row['carname'] . "</td>";
+    echo "<td>" . $row['bodytype'] . "</td>";
+    echo "<td>" . $row['status'] . "</td>";
+    echo "<td><button class='approve-btn' onclick='approveBooking(" . $row['id'] . ")'>Approve</button><button class='cancel-btn' onclick='cancelBooking(" . $row['id'] . ")'>Cancel</button></td>";
+    echo "</tr>";
+  }
+  echo "</table>";
+} else {
+  echo "No bookings found.";
+}
+
+mysqli_close($conn);
+?>
+"php code"
+function approveBooking(id) {
+    // Send request to approve booking with given id
+    console.log("Booking with id " + id + " approved.");
+  }
+  
+  function cancelBooking(id) {
+    // Send request to cancel booking with given id
+    console.log("Booking with id " + id + " canceled.");
+  }
+  "js code"
+when admin click the approve button then one dialogue box will appear with text inside 'Want to approve the booking' then when admin click ok then the status will change to approved and when the admin click the cancel button then one dialogue box appear  'want to cancel the booking ' then when admin click ok then the status will change to cancelled. Please provide me the full correct code as per my requirements

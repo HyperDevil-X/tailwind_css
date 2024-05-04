@@ -77,24 +77,43 @@
 </html>
                         <!-------------Register php section start------------->
 <?php
-    include("connection.php");
-    if(isset($_POST["rbtn"])) {
-        $rusername = $_POST["rusername"];
-        $remail = $_POST["remail"];
-        $rpassword = $_POST["rpassword"];
-        $cpassword = $_POST["cpassword"];
-        $query = "INSERT INTO register VALUES('', '$rusername', '$remail', '$rpassword', '$cpassword')";
-        $que = mysqli_query($conn, $query);
-        if($que)
-        {
-        echo "<script> alert('𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵𝔂 𝓡𝓮𝓰𝓲𝓼𝓽𝓮𝓻𝓮𝓭');window.location.href = 'login.php'; </script>";
-        exit();
-    }
-    else
-    {
-        echo"<script>alert('𝓝𝓸𝓽 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵𝔂 𝓡𝓮𝓰𝓲𝓼𝓽𝓮𝓻𝓮𝓭'); </script>";
-    }
-    }
+        include("connection.php");
+
+        if(isset($_POST["rbtn"])) {
+            // Sanitize user inputs to prevent SQL injection and XSS
+            $rusername = htmlspecialchars(mysqli_real_escape_string($conn, $_POST["rusername"]));
+            $remail = htmlspecialchars(mysqli_real_escape_string($conn, $_POST["remail"]));
+            // Password hashing to prevent SQL injection and storing plaintext passwords
+            $rpassword = mysqli_real_escape_string($conn, $_POST["rpassword"]);
+            $cpassword = mysqli_real_escape_string($conn, $_POST["cpassword"]);
+            
+            // Password hashing for better security
+            $hashedPassword = password_hash($rpassword, PASSWORD_DEFAULT);
+
+            // Prepare SQL statement with placeholders
+            $query = "INSERT INTO register (rusername, remail, rpassword, cpassword) VALUES (?, ?, ?, ?)";
+
+            // Create a prepared statement
+            $stmt = mysqli_prepare($conn, $query);
+
+            // Bind parameters and execute statement
+            mysqli_stmt_bind_param($stmt, "ssss", $rusername, $remail, $hashedPassword, $cpassword);
+            $success = mysqli_stmt_execute($stmt);
+
+            if($success) {
+                echo "<script>alert('𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵𝔂 𝓡𝓮𝓰𝓲𝓼𝓽𝓮𝓻𝓮𝓭'); window.location.href = 'login.php'; </script>";
+                exit();
+            } else {
+                echo "<script>alert('𝓡𝓮𝓰𝓲𝓼𝓽𝓻𝓪𝓽𝓲𝓸𝓷 𝓕𝓪𝓲𝓵𝓮𝓭'); </script>";
+            }
+
+            // Close prepared statement
+            mysqli_stmt_close($stmt);
+        }
+
+        // Close database connection
+        mysqli_close($conn);
 ?>
+
 
                         <!-------------Register php section end------------->

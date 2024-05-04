@@ -130,8 +130,8 @@
                         <!------------car section------------->
     <div class="parallel-section">
     <div class="carheading">
-        <h3>Vehicles Models &nbsp;<span>For Rent</span></h3>
-        <p>Vehicle models for rent refer to the various types and makes of vehicles that are available for temporary use through rental services. These rental services are commonly offered by car rental companies, and they provide customers with a wide range of vehicle options to choose from. </p>
+        <h3> Top Vehicles Models &nbsp;<span>For Rent</span></h3>
+        <p>Top Vehicle models for rent refer to the various types and makes of vehicles that are available for temporary use through rental services. These rental services are commonly offered by car rental companies, and they provide customers with a wide range of vehicle options to choose from. </p>
     </div>       
     </div>
                 <div class="slider" id="carsection">

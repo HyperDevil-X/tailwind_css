@@ -81,18 +81,52 @@
 
 <div class="midcontent">
 	<div class="dashboard-overview">
-		<h2 class="do">Dashboard Overview</h2>
-		<!-- Add your summary metrics and analytics here -->
+		<h2 class="do"></h2>
+        
+                        <?php
+                            include("../tailwind_css/annual-sales.php");
+                        ?>
 	</div>
 
-	<div class="vehicle-management">
-		<h2 class="vm">Vehicle Management</h2>
-		<!-- Add vehicle management functionalities here -->
-	</div>
+
+	<div class="vehicle-management" id="vehicle-management">
+		<!-- <h2 class="vm">Vehicle Management</h2> -->
+                        <?php
+                        include("../tailwind_css/view_rental.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/vehiclemanagement.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/process.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/choosecarimage.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/fetch_vehicle_data.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/update_vehicle_data.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/delete_vehicle_data.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/viewvehicledetails.php");
+                        ?>
+                        <?php
+                        include("../tailwind_css/set_r_and_a.php");
+                        ?>
+                        
+                        
+  </div>
 
 	<div class="booking-management">
-		<h2 class="bm">Booking Management</h2>
-		<!-- Add booking management functionalities here -->
+		<!-- <h2 class="bm">Booking Management</h2> -->
+		<?php
+                        include("../tailwind_css/fetchbookings.php");
+                        ?>
 	</div>
 
 	<div class="customer-management">

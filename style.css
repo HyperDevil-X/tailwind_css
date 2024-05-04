@@ -2744,3 +2744,174 @@ hr.shads{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
 }
+.carheadingtext {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57vh;
+    margin: 0% 0% 0% 20%;
+  }
+  
+  .carheadingmarquee {
+    width: 60%;
+    height: 70px;
+    background-color: #C1C1E8;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-collapse: separate;
+    text-align: center;
+    font-size: 26.5px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  .ourcarcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the row */
+    margin-top: 20px; /* Adjust as needed */
+    padding: 0 10px; /* Adjust padding as needed */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.ourcarvehicle-box {
+    width: calc(20% - 20px); /* 20% width for each box with margin included */
+    margin: 10px; /* Adjust margin as needed */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
+}
+
+.ourcarvehicle-box img {
+    width: 100%; /* Updated width to ensure image fills the container */
+    height: auto; /* Auto height to maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.ourcarvehicle-info {
+    font-size: 14px; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+.ourcarvehicle-info span {
+    font-weight: bold;
+}
+
+
+.ourcarpopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .ourcarpopup-content {
+    background-color:#D4DBEF;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 25%;
+  }
+  .ourcarpopup-content h2{
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  }
+  .ourcarpopup-content input{
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5%;
+    width: 50%;
+    background: transparent;
+    /* outline:none; */
+    /* border: none; */
+  }
+  .ourcarpopup-content input::placeholder
+  {
+    color: #454444;
+  }
+  .ourcarclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: all .5s ease;
+  }
+  
+  .ourcarclose:hover,
+  .ourcarclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 35px;
+  }
+  .ourcarpopup .ourcarpopup-content .carbtn{
+    border: 1px solid black;
+    font-weight: 600;
+    background-color: #C1C1E8;
+    color: #000000;    
+    transition: all .5s ease;
+    border: none;
+    outline: none;
+  }
+  .ourcarpopup .ourcarpopup-content .carbtn:hover{
+    box-shadow: 0px 0px 10px black;
+    background-color: #7A6FED;
+    color: white;
+  }
+  .ourcarviewcontainer {
+    width: 40%;
+    margin: -10% 55% 0% 0%; /* Adjusted margin to center the container */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+    float: right;
+}
+
+.ourcarviewcontainer h1 {
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    font-variant: small-caps;
+}
+
+.ourcarviewbox {
+    width: 30.8%;
+    margin: 0 1% 20px; /* Adjusted margin to provide space between boxes */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    background-color: #AFC3FC;
+}
+
+.ourcarviewbox h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ourcarviewbox p {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}

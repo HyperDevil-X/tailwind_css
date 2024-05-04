@@ -28,21 +28,26 @@
             else 
             {
                 // Validate admin login
-                $rusername = $_POST["rusername"];
-                $rpassword = $_POST["rpassword"];
-                $query = "SELECT * FROM admin WHERE rusername = '$rusername' AND rpassword = '$rpassword'";
-                $que = mysqli_query($conn, $query);
-                $eml = mysqli_num_rows($que);
-                if ($eml >= 1) 
+                $rusername = mysqli_real_escape_string($conn, $_POST["rusername"]);
+                $rpassword = mysqli_real_escape_string($conn, $_POST["rpassword"]);
+        
+                $query = "SELECT * FROM admin WHERE rusername = ? AND rpassword = ?";
+                $stmt = mysqli_prepare($conn, $query);
+                mysqli_stmt_bind_param($stmt, "ss", $rusername, $rpassword);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+        
+                if(mysqli_num_rows($result) >= 1) 
                 {
-                    echo "<script>alert('𝓛𝓸𝓰𝓲𝓷 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵')</script>";
+                    echo "<script>alert('𝓛𝓸𝓰𝓲𝓷 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵');</script>";
                     $_SESSION["admin_logged_in"] = true;
+                    $_SESSION['login_time'] = time(); // Record login time
                     header("Location: admin.php");
                     exit;
                 }
                 else 
                 {
-                    echo "<script>alert('𝓘𝓷𝓿𝓪𝓵𝓲𝓭 ! 𝓟𝓵𝓮𝓪𝓼𝓮 𝓒𝓱𝓮𝓬𝓴 𝓨𝓸𝓾𝓻 𝓔𝓶𝓪𝓲𝓵 𝓸𝓻 𝓟𝓪𝓼𝓼𝔀𝓸𝓻𝓭')</script>";
+                    echo "<script>alert('𝓘𝓷𝓿𝓪𝓵𝓲𝓭 ! 𝓟𝓵𝓮𝓪𝓼𝓮 𝓒𝓱𝓮𝓬𝓴 𝓨𝓸𝓾𝓻 𝓔𝓶𝓪𝓲𝓵 𝓸𝓻 𝓟𝓪𝓼𝓼𝔀𝓸𝓻𝓭');</script>";
                 }
             }
         }
@@ -156,7 +161,7 @@ $_SESSION['captcha_code'] = generateCaptchaCode();
         alert("𝓟𝓵𝓮𝓪𝓼𝓮! 𝓡𝓮𝓯𝓻𝓮𝓼𝓱 𝓽𝓱𝓮 𝓹𝓪𝓰𝓮 𝓽𝓸 𝓵𝓸𝓰𝓲𝓷 𝓪𝓰𝓪𝓲𝓷");
         window.location.reload(); // Reload the page to prevent login
     }
-    , 300000); // 30 seconds
+    , 40000); // 30 seconds
 </script>
     <!--------login session section End------->
 

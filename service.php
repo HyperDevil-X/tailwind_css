@@ -41,7 +41,7 @@
                 <p>2017</p>
                 <h3>2018 Honda City</h3>
                 <h2>&#8377;58500 | &#8377;358 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
         
         <div class="servicesbox">
@@ -51,7 +51,7 @@
                 <p>2017</p>
                 <h3>2018 Toyota LandCruiser</h3>
                 <h2>&#8377;58500 | &#8377;358 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
         
         <div class="servicesbox">
@@ -61,7 +61,7 @@
                 <p>2017</p>
                 <h3>2018 Mahendra XUV700</h3>
                 <h2>&#8377;65723 | &#8377;530 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
         
         <div class="servicesbox">
@@ -71,7 +71,7 @@
                 <p>2017</p>
                 <h3>2018 Kia Carens</h3>
                 <h2>&#8377;46390 | &#8377;425 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
         
         <div class="servicesbox">
@@ -81,7 +81,7 @@
                 <p>2017</p>
                 <h3>2018 Hyundai Exter</h3>
                 <h2>&#8377;48500 | &#8377;300 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
         
         <div class="servicesbox">
@@ -91,7 +91,7 @@
                 <p>2023</p>
                 <h3>2024 Hyundai Verna</h3>
                 <h2>&#8377;60000 | &#8377;412 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
             <div class="servicesbox">
                 <div class="servicesboximg">
@@ -100,7 +100,7 @@
                 <p>2011</p>
                 <h3>2012 Nissan Magnite</h3>
                 <h2>&#8377;36070 | &#8377;292 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
             <div class="servicesbox">
                 <div class="servicesboximg">
@@ -109,7 +109,7 @@
                 <p>2021</p>
                 <h3>2022 Jeep Wrangler</h3>
                 <h2>&#8377;97005 | &#8377;892 <span>/month</span></h2>
-            <a href="#" class="serbtn">Rent Now</a>
+            <a href="ourcars.php" class="serbtn">Rent Now</a>
             </div>
     </div>
     <div class="lowersvg">
@@ -138,7 +138,7 @@
     <div class="nxtcar">
       <img src="image/car3.PNG" alt="Car 3">
       <div class="nxtcar-info">
-        <h2>Mini Convertible</h2>
+        <h2>Mini Convertible MUV</h2>
         <p>Experience the thrill of driving with the wind in your hair.</p>
       </div>
     </div>

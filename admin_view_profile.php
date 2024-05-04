@@ -75,7 +75,7 @@ if(!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== true
             </div>
         </div>
         
-        <div class="buttons">
+        <div class="buttons" style="margin-top:13.5%; margin-left:-18%;">
             <button class="back-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
             <button class="edit-btn" onclick="confirmUpdate()"><i class="fas fa-edit"></i> Edit</button>
         </div>
